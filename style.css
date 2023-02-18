@@ -77,6 +77,10 @@ main {
     color: rgba(150, 69, 0, 0.7);
 }
 
+.credit-container a:hover {
+    color: rgb(255, 50, 100);
+}
+
 .main-body {
     flex: 1.5;
     font-size: 1rem;
@@ -109,10 +113,46 @@ main {
     display: flex;
     flex-direction: column;
     flex-basis: 50%;
+    position: relative;
+}
+
+.form-row input:hover {
+    background-color: rgb(240, 240, 240);
 }
 
 .form-row input:focus {
-    outline: 10px double rgb(200, 200, 150);
+    outline: 5px solid rgb(200, 200, 150);
+}
+
+.form-row label {
+    height: 30px;
+}
+
+input:invalid:not(.unfill) + span::after {
+    color: rgb(255, 50, 100);
+    font-size: 0.8rem;
+    position: absolute;
+    top: 75px;
+}
+
+input:is(#first-name, #last-name):not(.unfill):invalid + span::after {
+    content: "* Name should not be empty";
+}
+
+input#email:invalid:not(.unfill) + span::after {
+    content: "* Email should not be empty";
+}
+
+input#tel:invalid:not(.unfill) + span::after {
+    content: "* Telephone number should not be empty";
+}
+
+input#password:invalid:not(.unfill) + span::after {
+    content: "* Password should not be empty";
+}
+
+input#confirm-password:invalid:not(.unfill) + span::after {
+    content: "* Password should not be empty";
 }
 
 .form-button button {
@@ -128,8 +168,12 @@ main {
     margin: 40px;
 }
 
+.form-button button:hover {
+    background-color: rgba(15, 118, 110, 0.5);
+}
+
 .form-button button:focus {
-    outline: 10px double rgb(200, 200, 150);
+    outline: 5px solid rgb(200, 200, 150);
 }
 
 .form-footer {
@@ -143,4 +187,8 @@ main {
 
 .form-footer a:visited {
     color: rgb(128, 50, 128);
+}
+
+.form-footer a:hover {
+    color: rgb(255, 50, 100);
 }
