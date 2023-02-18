@@ -1,0 +1,146 @@
+@font-face {
+    font-family: "NorseBold";
+    src: local("NorseBold"), url("fonts/Norse-Bold.otf") format("opentype");
+    font-weight: bold;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(17, 24, 39);
+    color: rgb(229, 231, 235);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+input, label, button {
+    appearance: none;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 0.5rem;
+    width: 300px;
+    height: 40px;
+}
+
+main {
+    display: flex;
+}
+
+.banner-container {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    flex: 1;
+}
+
+.banner-container .logo-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 20%;
+    height: 20%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container p {
+    font-size: 7rem;
+    font-weight: bold;
+    font-family: "NorseBold", Helvetica, sans-serif;
+}
+
+.banner-container .credit-container {
+    color: rgba(229, 231, 235, 0.7);
+    font-size: 1.25rem;
+    font-weight: bold;
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.credit-container a:link {
+    padding: 0 5px;
+    color: rgba(255, 69, 0.7);
+}
+
+.credit-container a:visited {
+    color: rgba(150, 69, 0, 0.7);
+}
+
+.main-body {
+    flex: 1.5;
+    font-size: 1rem;
+    box-sizing: border-box;
+    min-height: 100vh;
+    width: 50vw;
+    padding: 5%;
+    padding-top: 2%;
+    margin: 0 0 0 auto;
+}
+
+.body-header {
+    margin: 0 0 5% 5%;
+}
+
+.main-form .form-container {
+    background-color: rgb(55, 65, 81);
+    border: 3px solid rgba(229, 231, 235, 0.7);
+    border-radius: 5px;
+    padding: 50px 20px;
+}
+
+.main-form .form-body {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1.5rem;
+}
+
+.form-body .form-row {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+}
+
+.form-row input:focus {
+    outline: 10px double rgb(200, 200, 150);
+}
+
+.form-button button {
+    background-color: rgb(15, 118, 110);
+    border: 3px solid rgba(229, 231, 235, 0.8);
+    border-radius: 10px;
+    color: rgba(229, 231, 235, 0.8);
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 1.75rem;
+    width: 250px;
+    height: 50px;
+    margin: 40px;
+}
+
+.form-button button:focus {
+    outline: 10px double rgb(200, 200, 150);
+}
+
+.form-footer {
+    font-size: 1.25rem;
+    margin-left: 40px;
+}
+
+.form-footer a:link {
+    color: rgb(169, 121, 43);
+}
+
+.form-footer a:visited {
+    color: rgb(128, 50, 128);
+}
