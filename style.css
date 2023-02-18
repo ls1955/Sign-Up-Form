@@ -128,7 +128,11 @@ main {
     height: 30px;
 }
 
-input:invalid:not(.unfill) + span::after {
+input:is(:invalid, .short-password-err, .unmatch-password-err):not(.unfill) {
+    background-color: rgb(255, 100, 150);
+}
+
+input:is(:invalid, .short-password-err, .unmatch-password-err):not(.unfill) + span::after {
     color: rgb(255, 50, 100);
     font-size: 0.8rem;
     position: absolute;
@@ -140,19 +144,19 @@ input:is(#first-name, #last-name):not(.unfill):invalid + span::after {
 }
 
 input#email:invalid:not(.unfill) + span::after {
-    content: "* Email should not be empty";
+    content: "* Email sample format: foo@bar.com";
 }
 
-input#tel:invalid:not(.unfill) + span::after {
-    content: "* Telephone number should not be empty";
+input#password.short-password-err:not(.unfill, ) + span::after {
+    content: "* Password should have more than 8 characters";
 }
 
-input#password:invalid:not(.unfill) + span::after {
-    content: "* Password should not be empty";
+input#confirm-password.short-password-err:not(.unfill) + span::after {
+    content: "* Password should have more than 8 characters";
 }
 
-input#confirm-password:invalid:not(.unfill) + span::after {
-    content: "* Password should not be empty";
+input#confirm-password.unmatch-password-err:not(.unfill) + span::after {
+    content: "* Password do not match"
 }
 
 .form-button button {

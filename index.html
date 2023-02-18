@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up page</title>
     <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
 </head>
 <body>
     <main>
@@ -36,7 +37,7 @@
                     <div class="form-body">
                         <div class="form-row">
                             <label for="first-name">FIRST NAME</label>
-                            <input required class="unfill" type="text" name="first-name" id="first-name">
+                            <input required class="unfill" type="text" name="first-name" id="first-name" value="">
                             <span></span>
                         </div>
                         <div class="form-row">
@@ -50,13 +51,13 @@
                             <span></span>
                         </div>
                         <div class="form-row">
-                            <label for="tel">PHONE NUMBER</label>
-                            <input required class="unfill" type="tel" name="tel" id="tel">
+                            <label for="tel">PHONE NUMBER (optional)</label>
+                            <input class="unfill" type="tel" name="tel" id="tel">
                             <span></span>
                         </div>
                         <div class="form-row">
                             <label for="password">PASSWORD</label>
-                            <input required class="unfill" type="password" name="password" id="password">
+                            <input required class="unfill" type="password" name="password" id="password" minlength="8">
                             <span></span>
                         </div>
                         <div class="form-row">
